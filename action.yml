@@ -1,0 +1,17 @@
+name: Writerside doc errors checker
+description: Inspects documentation for errors
+branding:
+  icon: corner-down-right
+  color: purple
+
+inputs:
+  instance:
+    description: 'The instance variable'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - 'artifacts/report.json'
+    - '${{ inputs.instance }}'
