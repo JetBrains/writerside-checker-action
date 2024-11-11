@@ -46,11 +46,11 @@ permissions:
 
 env:
     # Name of module and id separated by a slash
-    INSTANCE: Writerside/hi
+    INSTANCE: 'Writerside/hi'
     # Replace HI with the ID of the instance in capital letters
-    ARTIFACT: webHelpHI2-all.zip
+    ARTIFACT: 'webHelpHI2-all.zip'
     # Writerside docker image version
-    DOCKER_VERSION: 242.21870
+    DOCKER_VERSION: '243.21565'
 # Add the variable below to upload Algolia indexes
 # Replace HI with the ID of the instance in capital letters
     ALGOLIA_ARTIFACT: algolia-indexes-HI.zip
