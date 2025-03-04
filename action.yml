@@ -1,4 +1,4 @@
-name: Writerside doc errors checker
+name: Siarhei doc errors checker
 description: Inspects documentation for errors
 branding:
   icon: corner-down-right
@@ -6,8 +6,12 @@ branding:
 
 inputs:
   instance:
-    description: 'The instance variable'
+    description: 'The instance or group variable (format: "Writerside/instanceID" or "Writerside/groupID")'
     required: true
+  is-group:
+    description: 'Set to any value to treat the instance as a group'
+    required: false
+    default: ''
 
 runs:
   using: 'docker'
@@ -15,3 +19,4 @@ runs:
   args:
     - 'artifacts/report.json'
     - '${{ inputs.instance }}'
+    - '${{ inputs.is-group }}'
