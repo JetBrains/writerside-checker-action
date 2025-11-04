@@ -1,6 +1,6 @@
-FROM openjdk:18-jdk-slim
+FROM eclipse-temurin:21-jdk-alpine
 
-RUN apt-get update && apt-get install -y curl
+RUN apk add --no-cache curl
 
 RUN mkdir /app
 WORKDIR /app
